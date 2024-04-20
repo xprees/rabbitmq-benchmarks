@@ -5,11 +5,10 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <RootNamespace>Sender</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Messaging.RabbitMQ\Messaging.RabbitMQ.csproj"/>
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.12"/>
   </ItemGroup>
 
 </Project>

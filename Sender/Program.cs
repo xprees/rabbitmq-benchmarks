@@ -1,24 +1,12 @@
-﻿using RabbitMQ.Client;
+﻿using Messaging.RabbitMQ;
 
-var factory = new ConnectionFactory { HostName = "localhost" };
-using var connection = factory.CreateConnection();
-using var channel = connection.CreateModel();
-
-channel.QueueDeclare(queue: "hello3",
-    durable: false,
-    exclusive: false,
-    autoDelete: false,
-    arguments: null);
+using var client = new RabbitTestingHelper("localhost", "way-1");
 
 var message = "Hello Igor!"u8.ToArray();
 
 while (true)
 {
-    channel.BasicPublish(exchange: string.Empty,
-        routingKey: "hello",
-        basicProperties: null,
-        body: message
-    );
+    client.SendMessage(message);
     Console.WriteLine($" [x] Sent {message.Length} bytes: {message}");
 
     Console.WriteLine("Send next message");

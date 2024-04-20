@@ -4,6 +4,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sender", "Sender\Sender.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Receiver", "Receiver\Receiver.csproj", "{2E3641F2-976C-4C01-B742-0DE9EB197189}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging.RabbitMQ", "Messaging.RabbitMQ\Messaging.RabbitMQ.csproj", "{56E1881D-8CF3-48B0-8F8D-95D0CFA2F0C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5F8658E3-44CB-4ACC-9B60-8FC28A157F5D}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchmarking", "Benchmarking\Benchmarking.csproj", "{5961D295-F5B1-4A68-9F61-466967205F48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +27,13 @@ Global
 		{2E3641F2-976C-4C01-B742-0DE9EB197189}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E3641F2-976C-4C01-B742-0DE9EB197189}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E3641F2-976C-4C01-B742-0DE9EB197189}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56E1881D-8CF3-48B0-8F8D-95D0CFA2F0C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56E1881D-8CF3-48B0-8F8D-95D0CFA2F0C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56E1881D-8CF3-48B0-8F8D-95D0CFA2F0C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56E1881D-8CF3-48B0-8F8D-95D0CFA2F0C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5961D295-F5B1-4A68-9F61-466967205F48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5961D295-F5B1-4A68-9F61-466967205F48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5961D295-F5B1-4A68-9F61-466967205F48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5961D295-F5B1-4A68-9F61-466967205F48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
