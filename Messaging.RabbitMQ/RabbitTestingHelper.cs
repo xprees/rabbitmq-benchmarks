@@ -13,7 +13,7 @@ public class RabbitTestingHelper : IDisposable
     public string QueueName { get; }
     public IModel Channel => _channel;
 
-    public RabbitTestingHelper(string hostName, string queueName,
+    public RabbitTestingHelper(string queueName, string hostName = "localhost",
         EventHandler<BasicDeliverEventArgs>? onMessageReceived = null)
     {
         _onMessageReceived = onMessageReceived;
@@ -66,6 +66,8 @@ public class RabbitTestingHelper : IDisposable
     public void Dispose()
     {
         if (_onMessageReceived != null && _consumer != null) _consumer.Received -= _onMessageReceived;
+        _channel.Close();
+        _connection.Close();
         _connection.Dispose();
         _channel.Dispose();
     }
