@@ -2,17 +2,26 @@
 using Messaging.RabbitMQ;
 using RabbitMQ.Client.Events;
 
-using var client = new RabbitTestingHelper("localhost", "way-1", OnMessageReceived());
+const string sendQueue = "sendQueue"; // It's the opposite of the other project
+const string receiveQueue = "receiveQueue";
+
+using var callbackClient = new RabbitTestingHelper(receiveQueue);
+using var receiverClient = new RabbitTestingHelper(sendQueue, onMessageReceived: OnMessageReceived());
 
 Console.WriteLine(" Press [enter] to exit.");
 Console.ReadLine();
 
 return;
 
-EventHandler<BasicDeliverEventArgs>? OnMessageReceived() =>
-    (model, ea) =>
+EventHandler<BasicDeliverEventArgs> OnMessageReceived() =>
+    (_, ea) =>
     {
         var body = ea.Body.ToArray();
         var message = Encoding.UTF8.GetString(body);
-        Console.WriteLine($" [x] Received {message}");
+
+        var backMessage = Encoding.UTF8.GetBytes(message);
+        callbackClient.SendMessage(backMessage);
+#if DEBUG
+        Console.WriteLine("Message received and sent back");
+#endif
     };

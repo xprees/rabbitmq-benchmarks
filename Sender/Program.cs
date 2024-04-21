@@ -1,6 +1,6 @@
 ﻿using Messaging.RabbitMQ;
 
-using var client = new RabbitTestingHelper("localhost", "way-1");
+using var client = new RabbitTestingHelper("sendQueue");
 
 var message = "Hello Igor!"u8.ToArray();
 
