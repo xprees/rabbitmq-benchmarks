@@ -1,33 +1,57 @@
-﻿using BenchmarkDotNet.Attributes;
+﻿using Messaging.RabbitMQ;
+using RabbitMQ.Client.Events;
 
-namespace Receiver.Benchmarks;
+namespace Benchmarking.Benchmarks;
 
-// TODO compare in different broker configurations and setups (federate)
-// TODO connect grafana to the broker and monitor the performance
-// TODO compare different message brokers configurations (federate, cluster, etc.)
-// TODO compare different message sizes (1000, 10000, 100000)
-// TODO compare different message brokers setups (single node, multiple nodes, etc.)
+[MarkdownExporter]
 public class MessageSizeBenchmark
 {
-    private string _message;
+    private const string SendQueue = "sendQueue";
+    private const string ReceiveQueue = "receiveQueue";
 
-    [Params(1000, 10000, 100000)] public int messageSize;
+    private RabbitTestingHelper _sendTestingHelper = null!;
+    private RabbitTestingHelper _receiveTestingHelper = null!;
+
+    // 1KB, 1MB, 8MB, 32MB, 64 MB, 128MB
+    [Params(1024, 1_048_576, 8_388_608, 33_554_432, 67_108_864, 134_217_728)]
+    public int MessageSize;
+
+    private byte[] _message = null!;
+    private TaskCompletionSource<bool> _messageReceivedSource = null!;
 
     [GlobalSetup]
     public void Setup()
     {
-        var message = 0x222;
-    }
-
-    [Benchmark]
-    public void SendMessage()
-    {
-        // TODO send message
+        _message = new byte[MessageSize];
+        _sendTestingHelper = new RabbitTestingHelper(SendQueue);
+        _receiveTestingHelper = new RabbitTestingHelper(ReceiveQueue, onMessageReceived: OnConsumerOnReceived);
     }
 
     [GlobalCleanup]
     public void Cleanup()
     {
-        // TODO close connection
+        _sendTestingHelper.Dispose();
+        _receiveTestingHelper.Dispose();
+    }
+
+    [IterationSetup]
+    public void IterationSetup()
+    {
+        _messageReceivedSource = new TaskCompletionSource<bool>();
+    }
+
+    [Benchmark]
+    public async Task SendMessageAndWaitForEcho()
+    {
+        _sendTestingHelper.SendMessage(_message);
+
+        // Wait for the reply
+        await _messageReceivedSource.Task
+            .ConfigureAwait(false);
+    }
+
+    private void OnConsumerOnReceived(object? model, BasicDeliverEventArgs ea)
+    {
+        _messageReceivedSource.SetResult(true);
     }
 }
