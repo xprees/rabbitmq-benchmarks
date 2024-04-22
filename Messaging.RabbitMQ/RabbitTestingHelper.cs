@@ -59,8 +59,7 @@ public class RabbitTestingHelper : IDisposable
         _channel.BasicPublish(
             exchange: string.Empty,
             routingKey: QueueName,
-            body: message
-        );
+            body: new ReadOnlyMemory<byte>(message));
 
 
     public void Dispose()
