@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿#undef ECHO
+
 using Messaging.RabbitMQ;
 using RabbitMQ.Client.Events;
 
@@ -16,14 +17,10 @@ return;
 
 void OnMessageReceived(object? model, BasicDeliverEventArgs ea)
 {
+#if ECHO
     var body = ea.Body.ToArray();
-    var message = Encoding.UTF8.GetString(body);
-
-    var backMessage = Encoding.UTF8.GetBytes(message);
-    callbackClient.SendMessage(backMessage);
-#if DEBUG
-        Console.WriteLine("Message received and sent back");
+    callbackClient.SendMessage(body);
+#else
+    callbackClient.SendMessage([]);
 #endif
 }
-
-;
