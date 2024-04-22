@@ -4,6 +4,7 @@ using RabbitMQ.Client.Events;
 namespace Benchmarking.Benchmarks;
 
 [MarkdownExporter]
+[RPlotExporter]
 public class MessageSizeBenchmark
 {
     private const string SendQueue = "sendQueue";
@@ -12,8 +13,8 @@ public class MessageSizeBenchmark
     private RabbitTestingHelper _sendTestingHelper = null!;
     private RabbitTestingHelper _receiveTestingHelper = null!;
 
-    // 1KB, 1MB, 8MB, 32MB, 64 MB, 128MB
-    [Params(1024, 1_048_576, 8_388_608, 33_554_432, 67_108_864, 134_217_728)]
+    // 1KB, 512KB, 1MB, 8MB, 32MB, 64 MB, 128MB
+    [Params(1024, 1024 * 512, 1_048_576, 8_388_608, 33_554_432, 67_108_864, 134_217_728)]
     public int MessageSize;
 
     private byte[] _message = null!;
@@ -41,7 +42,7 @@ public class MessageSizeBenchmark
     }
 
     [Benchmark]
-    public async Task SendMessageAndWaitForEcho()
+    public async Task MessageWaitForReply()
     {
         _sendTestingHelper.SendMessage(_message);
 
