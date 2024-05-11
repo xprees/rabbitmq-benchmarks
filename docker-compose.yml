@@ -11,3 +11,12 @@ services:
     deploy:
       mode: replicated
       replicas: 1
+
+  webapi:
+    build:
+      context: ReceiverWebApi
+      dockerfile: Dockerfile
+    ports:
+      - "5050:8080"
+      - "5051:8081"
+  
