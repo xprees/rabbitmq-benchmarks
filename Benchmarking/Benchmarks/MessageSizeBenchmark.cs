@@ -69,7 +69,11 @@ public class MessageSizeBenchmark
 
     private static HttpClient PrepareHttpClient(string apiBaseUrl)
     {
-        var client = new HttpClient(new HttpClientHandler());
+        var client = new HttpClient(new HttpClientHandler
+        {
+            MaxRequestContentBufferSize = 134_217_728, // 128MB
+        });
+
         client.BaseAddress = new Uri(apiBaseUrl);
         client.Timeout = TimeSpan.FromMinutes(5);
         return client;
