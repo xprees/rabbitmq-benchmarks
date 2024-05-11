@@ -1,0 +1,11 @@
+@WebApplication1_HostAddress = http://localhost:5050
+
+POST {{WebApplication1_HostAddress}}/echo/?message=Hello,%20World!
+Content-Type: application/json
+Accept: */*
+
+{
+  "data": "Hello, World!"
+}
+
+###
