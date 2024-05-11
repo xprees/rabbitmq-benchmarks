@@ -19,4 +19,6 @@ services:
     ports:
       - "5050:8080"
       - "5051:8081"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
   
