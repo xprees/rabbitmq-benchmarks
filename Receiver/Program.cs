@@ -3,13 +3,11 @@
 using Messaging.RabbitMQ;
 using RabbitMQ.Client.Events;
 
-const string sendQueue = "sendQueue"; // It's the opposite of the other project
-const string receiveQueue = "receiveQueue";
+using var callbackClient = new RabbitTestingHelper(RabbitConstants.ReceiveQueue);
+using var receiverClient = new RabbitTestingHelper(RabbitConstants.SendQueue, onMessageReceived: OnMessageReceived);
 
-using var callbackClient = new RabbitTestingHelper(receiveQueue);
-using var receiverClient = new RabbitTestingHelper(sendQueue, onMessageReceived: OnMessageReceived);
-
-Console.WriteLine($" Echoing messages from {sendQueue} to {receiveQueue} RabbitMQ queues.");
+Console.WriteLine(
+    $" Echoing messages from {RabbitConstants.SendQueue} to {RabbitConstants.ReceiveQueue} RabbitMQ queues.");
 Console.WriteLine(" Press [enter] to exit.");
 Console.ReadLine();
 

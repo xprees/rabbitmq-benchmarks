@@ -8,9 +8,6 @@ namespace Benchmarking.Benchmarks;
 [RPlotExporter]
 public class MessageSizeBenchmark
 {
-    private const string SendQueue = "sendQueue";
-    private const string ReceiveQueue = "receiveQueue";
-
     private RabbitTestingHelper _sendTestingHelper = null!;
     private RabbitTestingHelper _receiveTestingHelper = null!;
 
@@ -29,8 +26,9 @@ public class MessageSizeBenchmark
     public void Setup()
     {
         _message = new byte[MessageSize];
-        _sendTestingHelper = new RabbitTestingHelper(SendQueue);
-        _receiveTestingHelper = new RabbitTestingHelper(ReceiveQueue, onMessageReceived: OnConsumerOnReceived);
+        _sendTestingHelper = new RabbitTestingHelper(RabbitConstants.SendQueue);
+        _receiveTestingHelper =
+            new RabbitTestingHelper(RabbitConstants.ReceiveQueue, onMessageReceived: OnConsumerOnReceived);
         _httpClient = PrepareHttpClient(RestApiBaseUrl);
     }
 

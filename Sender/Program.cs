@@ -30,14 +30,12 @@ static HttpClient PrepareHttpClient(string apiBaseUrl)
 
 void StartRabbitPingPong()
 {
-    const string sendQueue = "sendQueue"; // It's the opposite of the other project
-    const string receiveQueue = "receiveQueue";
-
-    using var callbackClient = new RabbitTestingHelper(sendQueue);
+    using var callbackClient = new RabbitTestingHelper(RabbitConstants.SendQueue);
     using var receiverClient =
-        new RabbitTestingHelper(receiveQueue, onMessageReceived: OnMessageReceived(callbackClient));
+        new RabbitTestingHelper(RabbitConstants.ReceiveQueue, onMessageReceived: OnMessageReceived(callbackClient));
 
-    Console.WriteLine($" Echoing messages from {receiveQueue} to {sendQueue} RabbitMQ queues.");
+    Console.WriteLine(
+        $" Echoing messages from {RabbitConstants.ReceiveQueue} to {RabbitConstants.SendQueue} RabbitMQ queues.");
 
     Console.WriteLine(" ...and Kickoff!");
     callbackClient.SendMessage("Start"u8.ToArray());
@@ -46,8 +44,8 @@ void StartRabbitPingPong()
     Console.WriteLine(" Press [enter] to exit.");
     Console.ReadLine();
 
-    callbackClient.Channel.QueuePurge(sendQueue);
-    receiverClient.Channel.QueuePurge(receiveQueue);
+    callbackClient.Channel.QueuePurge(RabbitConstants.SendQueue);
+    receiverClient.Channel.QueuePurge(RabbitConstants.ReceiveQueue);
 }
 
 EventHandler<BasicDeliverEventArgs> OnMessageReceived(RabbitTestingHelper rabbitTestingHelper) =>
