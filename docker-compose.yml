@@ -2,6 +2,7 @@
 services:
   rabbitmq:
     image: rabbitmq:3.13-management
+    restart: always
     ports:
       - "5672:5672"
       - "15672:15672"
@@ -16,6 +17,7 @@ services:
     build:
       context: ReceiverWebApi
       dockerfile: Dockerfile
+    restart: always
     ports:
       - "5050:8080"
       - "5051:8081"

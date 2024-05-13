@@ -4,7 +4,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.WebHost.ConfigureKestrel(serverOptions =>
 {
-    serverOptions.Limits.MaxRequestBodySize = 134_217_728; // 128MB
+    serverOptions.Limits.MaxRequestBodySize =
+        null; // unlimited - but System.Text.Json doesn't support deserializing large messages than 100MB
 });
 
 var app = builder.Build();
