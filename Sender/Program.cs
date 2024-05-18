@@ -2,7 +2,7 @@
 using Messaging.RabbitMQ;
 using RabbitMQ.Client.Events;
 
-await CallRestApiEchoEndpoint("echo", "Hello, World!");
+await CallRestApiEchoEndpoint("echo", new byte[104_857_601]); // 100MB max message size for System.Text.Json
 
 return;
 
@@ -11,7 +11,8 @@ async Task CallRestApiEchoEndpoint(string endpoint = "echo", object? data = null
     using var httpClient = PrepareHttpClient("http://localhost:5050");
 
     var result = await httpClient.PostAsJsonAsync(endpoint, new { Data = data ?? "Test" });
-    Console.WriteLine($"{result.StatusCode} - {await result.Content.ReadAsStringAsync()}");
+    var content = await result.Content.ReadAsStringAsync();
+    Console.WriteLine($"{result.StatusCode} - {content[..100]}");
 }
 
 static HttpClient PrepareHttpClient(string apiBaseUrl)
