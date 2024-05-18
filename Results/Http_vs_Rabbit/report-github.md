@@ -1,10 +1,24 @@
+# HTTP vs RabbitMQ Benchmark
+
+Comparing the performance of sending messages of various sizes using HTTP and RabbitMQ
+
+<details>
+
+<summary>Testing Environment Details</summary>
+
+```
+
 BenchmarkDotNet v0.13.12, Windows 11 (10.0.22631.3593/23H2/2023Update/SunValley3)
 13th Gen Intel Core i7-13700H, 1 CPU, 20 logical and 14 physical cores
 .NET SDK 8.0.203
-[Host]     : .NET 8.0.3 (8.0.324.11423), X64 RyuJIT AVX2
-Job-PPJCHZ : .NET 8.0.3 (8.0.324.11423), X64 RyuJIT AVX2
+  [Host]     : .NET 8.0.3 (8.0.324.11423), X64 RyuJIT AVX2
+  Job-PPJCHZ : .NET 8.0.3 (8.0.324.11423), X64 RyuJIT AVX2
 
-InvocationCount=1 UnrollFactor=1
+InvocationCount=1  UnrollFactor=1  
+
+```
+
+</details>
 
 | Method   | MessageSize |             Mean |           Error |          StdDev |           Median |              Min |              Max |    Ratio |  RatioSD |
 |----------|-------------|-----------------:|----------------:|----------------:|-----------------:|-----------------:|-----------------:|---------:|---------:|
