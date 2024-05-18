@@ -4,8 +4,9 @@ using RabbitMQ.Client.Events;
 
 namespace Benchmarking.Benchmarks;
 
-[MarkdownExporter]
 [RPlotExporter]
+[MarkdownExporter]
+[MinColumn, MaxColumn, MeanColumn, MedianColumn]
 public class MessageSizeBenchmark
 {
     private RabbitTestingHelper _sendTestingHelper = null!;
@@ -16,8 +17,8 @@ public class MessageSizeBenchmark
     private HttpClient _httpClient = null!;
 
     // 512B, 1KB, 512KB, 1MB, 8MB, 32MB, 64 MB, 128MB (max message size)
-    [Params(512, 1024, 1024 * 512, 1_048_576, 8_388_608, 33_554_432, 67_108_864, 134_217_728)]
-    public int MessageSize;
+    //[Params(512, 1024,1024 * 100, 1024 * 512, 1_048_576, 8_388_608, 33_554_432, 67_108_864, 134_217_728)]
+    [Params(1024 * 100, 1024 * 512)] public int MessageSize { get; set; }
 
     private byte[] _message = null!;
     private TaskCompletionSource<bool> _messageReceivedSource = null!;
@@ -28,7 +29,7 @@ public class MessageSizeBenchmark
         _message = new byte[MessageSize];
         _sendTestingHelper = new RabbitTestingHelper(RabbitConstants.SendQueue);
         _receiveTestingHelper =
-            new RabbitTestingHelper(RabbitConstants.ReceiveQueue, onMessageReceived: OnConsumerOnReceived);
+            new RabbitTestingHelper(RabbitConstants.SendQueue, onMessageReceived: OnConsumerOnReceived);
         _httpClient = PrepareHttpClient(RestApiBaseUrl);
     }
 
@@ -46,11 +47,11 @@ public class MessageSizeBenchmark
         _messageReceivedSource = new TaskCompletionSource<bool>();
     }
 
-    [Benchmark(Baseline = true)]
+    [Benchmark(Baseline = true, OperationsPerInvoke = 100, Description = "HTTP")]
     public async Task<HttpResponseMessage> MessageRestApi() =>
         await _httpClient.PostAsJsonAsync("receive", new { Data = _message });
 
-    [Benchmark]
+    [Benchmark(OperationsPerInvoke = 100, Description = "RabbitMQ")]
     public async Task MessageRabbitWaitForReply()
     {
         _sendTestingHelper.SendMessage(_message);
