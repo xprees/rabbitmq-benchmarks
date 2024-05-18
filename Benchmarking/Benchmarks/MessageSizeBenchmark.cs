@@ -16,9 +16,9 @@ public class MessageSizeBenchmark
 
     private HttpClient _httpClient = null!;
 
-    // 512B, 1KB, 512KB, 1MB, 8MB, 32MB, 64 MB, 128MB (max message size)
-    //[Params(512, 1024,1024 * 100, 1024 * 512, 1_048_576, 8_388_608, 33_554_432, 67_108_864, 134_217_728)]
-    [Params(1024 * 100, 1024 * 512)] public int MessageSize { get; set; }
+    // 1KB, 100KB, 512KB, 1MB, 8MB, 32MB, 64 MB
+    [Params(1024, 1024 * 100, 1024 * 512, 1_048_576, 8_388_608, 33_554_432, 67_108_864)]
+    public int MessageSize { get; set; } // (128MB max message size RabbitMQ supports, 100MB for HTTP)
 
     private byte[] _message = null!;
     private TaskCompletionSource<bool> _messageReceivedSource = null!;
