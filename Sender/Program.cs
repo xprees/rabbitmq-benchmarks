@@ -1,8 +1,14 @@
 ﻿using System.Net.Http.Json;
 using Messaging.RabbitMQ;
+using Messaging.RabbitMQ.MassTransit;
 using RabbitMQ.Client.Events;
 
-await CallRestApiEchoEndpoint("echo", new byte[104_857_601]); // 100MB max message size for System.Text.Json
+using var massTransitHelper = new MassTransitHelper();
+massTransitHelper.Start();
+
+await massTransitHelper.PublishMessage(new TestRequest("Test"));
+
+//await CallRestApiEchoEndpoint("echo", new byte[104_857_601]); // 100MB max message size for System.Text.Json
 
 return;
 
