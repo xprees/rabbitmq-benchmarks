@@ -1,4 +1,4 @@
-﻿using BenchmarkDotNet.Engines;
+﻿using System.Text;
 using Messaging.RabbitMQ;
 using Messaging.RabbitMQ.MassTransit;
 using RabbitMQ.Client.Events;
@@ -7,7 +7,6 @@ namespace Benchmarking.Benchmarks;
 
 [MarkdownExporter]
 [MinColumn, MaxColumn, MeanColumn, MedianColumn]
-[SimpleJob(RunStrategy.Throughput, warmupCount: 100)]
 public class MassTransitBenchmark
 {
     private MassTransitHelper _massTransitHelper = null!;
@@ -28,7 +27,7 @@ public class MassTransitBenchmark
     public void Setup()
     {
         _message = new byte[MessageSize];
-        _messageAsString = System.Text.Encoding.UTF8.GetString(_message);
+        _messageAsString = Encoding.UTF8.GetString(_message);
 
         _sendTestingHelper = new RabbitTestingHelper(RabbitConstants.SendQueue);
         _receiveTestingHelper =
