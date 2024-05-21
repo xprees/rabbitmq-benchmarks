@@ -16,7 +16,6 @@ public class MassTransitBenchmark
     private TaskCompletionSource<bool> _rabbitMessageReceivedSource = null!;
 
     // 1KB, 100KB, 512KB, 1MB, 8MB, 16MB
-
     [Params(1024, 1024 * 100, 1024 * 512, 1_048_576, 8_388_608, 16_777_216)]
     public int MessageSize { get; set; }
 
