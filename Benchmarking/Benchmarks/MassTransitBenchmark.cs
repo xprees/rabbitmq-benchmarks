@@ -6,10 +6,11 @@ using RabbitMQ.Client.Events;
 namespace Benchmarking.Benchmarks;
 
 [MarkdownExporter]
+[RPlotExporter]
 [MinColumn, MaxColumn, MeanColumn, MedianColumn]
 public class MassTransitBenchmark
 {
-    private MassTransitHelper _massTransitHelper = null!;
+    private MassTransitHelper _rabbitMassTransitHelper = null!;
 
     private RabbitTestingHelper _sendTestingHelper = null!;
     private RabbitTestingHelper _receiveTestingHelper = null!;
@@ -32,14 +33,14 @@ public class MassTransitBenchmark
         _receiveTestingHelper =
             new RabbitTestingHelper(RabbitConstants.SendQueue, onMessageReceived: OnConsumerOnReceived);
 
-        _massTransitHelper = new MassTransitHelper();
-        _massTransitHelper.Start();
+        _rabbitMassTransitHelper = new MassTransitHelper(useInMemoryBus: false);
+        _rabbitMassTransitHelper.Start();
     }
 
     [GlobalCleanup]
     public void Cleanup()
     {
-        _massTransitHelper?.Dispose();
+        _rabbitMassTransitHelper?.Dispose();
         _sendTestingHelper?.Dispose();
         _receiveTestingHelper?.Dispose();
     }
@@ -47,7 +48,7 @@ public class MassTransitBenchmark
     [IterationSetup]
     public void IterationSetup()
     {
-        _massTransitHelper.Consumer.Reset();
+        _rabbitMassTransitHelper.Consumer.Reset();
     }
 
     [Benchmark(Baseline = true, Description = "RabbitClient", OperationsPerInvoke = 10)]
@@ -64,8 +65,8 @@ public class MassTransitBenchmark
     [Benchmark(Description = "MassTransit", OperationsPerInvoke = 10)]
     public async Task PublishMessage()
     {
-        await _massTransitHelper.PublishMessage(new TestRequest(_messageAsString));
-        await _massTransitHelper.Consumer.WaitForMessage()
+        await _rabbitMassTransitHelper.PublishMessage(new TestRequest(_messageAsString));
+        await _rabbitMassTransitHelper.Consumer.WaitForMessage()
             .ConfigureAwait(false);
     }
 

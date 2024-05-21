@@ -7,11 +7,31 @@ public class MassTransitHelper : IDisposable
 {
     private readonly IBusControl _busControl;
 
-    public MassTransitHelper() => _busControl = SetupBusControl();
+    public MassTransitHelper(bool useInMemoryBus = false)
+    {
+        if (useInMemoryBus)
+        {
+            _busControl = SetupBusControlInMemory();
+            return;
+        }
+
+        _busControl = SetupBusControlWithRabbit();
+    }
 
     public TestingConsumer Consumer { get; } = new();
 
-    private IBusControl SetupBusControl()
+    private IBusControl SetupBusControlInMemory()
+    {
+        return Bus.Factory
+            .CreateUsingInMemory(config =>
+            {
+                config.ReceiveEndpoint(queueName: $"MassTransit-{RabbitConstants.ReceiveQueue}",
+                    endpoint => { endpoint.Handler<TestRequest>(context => Consumer.Consume(context)); });
+            });
+    }
+
+
+    private IBusControl SetupBusControlWithRabbit()
     {
         return Bus.Factory
             .CreateUsingRabbitMq(config =>
