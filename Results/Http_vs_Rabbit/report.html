@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-    <meta charset='utf-8'/>
-    <title>Benchmarking.Benchmarks.MessageSizeBenchmark-20240518-170242</title>
+  <meta charset='utf-8'/>
+  <title>Benchmarking.Benchmarks.MessageSizeBenchmark-20240520-214753</title>
 
-    <style type="text/css">
-        table {
-            border-collapse: collapse;
-            display: block;
-            width: 100%;
-            overflow: auto;
-        }
+  <style type="text/css">
+    table {
+      border-collapse: collapse;
+      display: block;
+      width: 100%;
+      overflow: auto;
+    }
 
-        td, th {
-            padding: 6px 13px;
-            border: 1px solid #ddd;
-            text-align: right;
-        }
+    td, th {
+      padding: 6px 13px;
+      border: 1px solid #ddd;
+      text-align: right;
+    }
 
-        tr {
-            background-color: #fff;
-            border-top: 1px solid #ccc;
-        }
+    tr {
+      background-color: #fff;
+      border-top: 1px solid #ccc;
+    }
 
-        tr:nth-child(even) {
-            background: #f8f8f8;
-        }
-    </style>
+    tr:nth-child(even) {
+      background: #f8f8f8;
+    }
+  </style>
 </head>
 <body>
 <pre><code>
@@ -34,220 +34,219 @@ BenchmarkDotNet v0.13.12, Windows 11 (10.0.22631.3593/23H2/2023Update/SunValley3
 13th Gen Intel Core i7-13700H, 1 CPU, 20 logical and 14 physical cores
 .NET SDK 8.0.203
   [Host]     : .NET 8.0.3 (8.0.324.11423), X64 RyuJIT AVX2
-  Job-PPJCHZ : .NET 8.0.3 (8.0.324.11423), X64 RyuJIT AVX2
+  DefaultJob : .NET 8.0.3 (8.0.324.11423), X64 RyuJIT AVX2
 </code></pre>
-<pre><code>InvocationCount=1  UnrollFactor=1  
-</code></pre>
+<pre><code></code></pre>
 
 <table>
-    <thead>
-    <tr>
-        <th>Method</th>
-        <th>MessageSize</th>
-        <th>Mean</th>
-        <th>Error</th>
-        <th>StdDev</th>
-        <th>Median</th>
-        <th>Min</th>
-        <th>Max</th>
-        <th>Ratio</th>
-        <th>RatioSD</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>HTTP</td>
-        <td>1KB</td>
-        <td>6.732 &mu;s</td>
-        <td>0.2577 &mu;s</td>
-        <td>0.7436 &mu;s</td>
-        <td>6.546 &mu;s</td>
-        <td>5.580 &mu;s</td>
-        <td>8.704 &mu;s</td>
-        <td>1.00</td>
-        <td>0.00</td>
-    </tr>
-    <tr>
-        <td>RabbitMQ</td>
-        <td>1KB</td>
-        <td>481.754 &mu;s</td>
-        <td>16.7071 &mu;s</td>
-        <td>48.4705 &mu;s</td>
-        <td>487.218 &mu;s</td>
-        <td>13.083 &mu;s</td>
-        <td>497.510 &mu;s</td>
-        <td>72.25</td>
-        <td>10.37</td>
-    </tr>
-    <tr>
-        <td>HTTP</td>
-        <td>100KB</td>
-        <td>12.753 &mu;s</td>
-        <td>0.8686 &mu;s</td>
-        <td>2.4070 &mu;s</td>
-        <td>12.075 &mu;s</td>
-        <td>9.523 &mu;s</td>
-        <td>20.416 &mu;s</td>
-        <td>1.00</td>
-        <td>0.00</td>
-    </tr>
-    <tr>
-        <td>RabbitMQ</td>
-        <td>100KB</td>
-        <td>14.076 &mu;s</td>
-        <td>0.6195 &mu;s</td>
-        <td>1.8071 &mu;s</td>
-        <td>14.259 &mu;s</td>
-        <td>10.752 &mu;s</td>
-        <td>19.263 &mu;s</td>
-        <td>1.14</td>
-        <td>0.22</td>
-    </tr>
-    <tr>
-        <td>HTTP</td>
-        <td>512KB</td>
-        <td>39.752 &mu;s</td>
-        <td>2.1262 &mu;s</td>
-        <td>5.7118 &mu;s</td>
-        <td>39.066 &mu;s</td>
-        <td>30.420 &mu;s</td>
-        <td>61.354 &mu;s</td>
-        <td>1.00</td>
-        <td>0.00</td>
-    </tr>
-    <tr>
-        <td>RabbitMQ</td>
-        <td>512KB</td>
-        <td>42.654 &mu;s</td>
-        <td>0.8913 &mu;s</td>
-        <td>2.5858 &mu;s</td>
-        <td>42.584 &mu;s</td>
-        <td>36.546 &mu;s</td>
-        <td>48.917 &mu;s</td>
-        <td>1.09</td>
-        <td>0.16</td>
-    </tr>
-    <tr>
-        <td>HTTP</td>
-        <td>1MB</td>
-        <td>67.206 &mu;s</td>
-        <td>2.3080 &mu;s</td>
-        <td>6.4337 &mu;s</td>
-        <td>66.297 &mu;s</td>
-        <td>54.325 &mu;s</td>
-        <td>86.065 &mu;s</td>
-        <td>1.00</td>
-        <td>0.00</td>
-    </tr>
-    <tr>
-        <td>RabbitMQ</td>
-        <td>1MB</td>
-        <td>82.273 &mu;s</td>
-        <td>1.6433 &mu;s</td>
-        <td>4.6349 &mu;s</td>
-        <td>82.299 &mu;s</td>
-        <td>72.871 &mu;s</td>
-        <td>93.758 &mu;s</td>
-        <td>1.23</td>
-        <td>0.13</td>
-    </tr>
-    <tr>
-        <td>HTTP</td>
-        <td>8MB</td>
-        <td>554.478 &mu;s</td>
-        <td>18.7789 &mu;s</td>
-        <td>51.7225 &mu;s</td>
-        <td>548.222 &mu;s</td>
-        <td>469.997 &mu;s</td>
-        <td>705.834 &mu;s</td>
-        <td>1.00</td>
-        <td>0.00</td>
-    </tr>
-    <tr>
-        <td>RabbitMQ</td>
-        <td>8MB</td>
-        <td>643.031 &mu;s</td>
-        <td>22.2164 &mu;s</td>
-        <td>64.0994 &mu;s</td>
-        <td>642.072 &mu;s</td>
-        <td>523.547 &mu;s</td>
-        <td>810.567 &mu;s</td>
-        <td>1.17</td>
-        <td>0.14</td>
-    </tr>
-    <tr>
-        <td>HTTP</td>
-        <td>32MB</td>
-        <td>1,905.232 &mu;s</td>
-        <td>38.6622 &mu;s</td>
-        <td>113.9964 &mu;s</td>
-        <td>1,896.285 &mu;s</td>
-        <td>1,644.927 &mu;s</td>
-        <td>2,176.791 &mu;s</td>
-        <td>1.00</td>
-        <td>0.00</td>
-    </tr>
-    <tr>
-        <td>RabbitMQ</td>
-        <td>32MB</td>
-        <td>2,278.049 &mu;s</td>
-        <td>45.1932 &mu;s</td>
-        <td>115.0312 &mu;s</td>
-        <td>2,274.101 &mu;s</td>
-        <td>2,079.228 &mu;s</td>
-        <td>2,528.296 &mu;s</td>
-        <td>1.20</td>
-        <td>0.09</td>
-    </tr>
-    <tr>
-        <td>HTTP</td>
-        <td>64MB</td>
-        <td>3,838.481 &mu;s</td>
-        <td>75.5158 &mu;s</td>
-        <td>138.0850 &mu;s</td>
-        <td>3,840.749 &mu;s</td>
-        <td>3,534.508 &mu;s</td>
-        <td>4,099.775 &mu;s</td>
-        <td>1.00</td>
-        <td>0.00</td>
-    </tr>
-    <tr>
-        <td>RabbitMQ</td>
-        <td>64MB</td>
-        <td>4,609.005 &mu;s</td>
-        <td>91.4490 &mu;s</td>
-        <td>171.7634 &mu;s</td>
-        <td>4,625.784 &mu;s</td>
-        <td>4,249.819 &mu;s</td>
-        <td>4,981.996 &mu;s</td>
-        <td>1.20</td>
-        <td>0.06</td>
-    </tr>
-    <tr>
-        <td>HTTP</td>
-        <td>100MB</td>
-        <td>6,689.024 &mu;s</td>
-        <td>133.5723 &mu;s</td>
-        <td>284.6536 &mu;s</td>
-        <td>6,716.554 &mu;s</td>
-        <td>5,854.048 &mu;s</td>
-        <td>7,205.073 &mu;s</td>
-        <td>1.00</td>
-        <td>0.00</td>
-    </tr>
-    <tr>
-        <td>RabbitMQ</td>
-        <td>100MB</td>
-        <td>7,917.459 &mu;s</td>
-        <td>157.5908 &mu;s</td>
-        <td>199.3019 &mu;s</td>
-        <td>7,893.639 &mu;s</td>
-        <td>7,567.592 &mu;s</td>
-        <td>8,238.519 &mu;s</td>
-        <td>1.21</td>
-        <td>0.07</td>
-    </tr>
-    </tbody>
+  <thead>
+  <tr>
+    <th>Method</th>
+    <th>MessageSize</th>
+    <th>Mean</th>
+    <th>Error</th>
+    <th>StdDev</th>
+    <th>Median</th>
+    <th>Min</th>
+    <th>Max</th>
+    <th>Ratio</th>
+    <th>RatioSD</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>HTTP</td>
+    <td>1024</td>
+    <td>4.362 &mu;s</td>
+    <td>0.0841 &mu;s</td>
+    <td>0.0968 &mu;s</td>
+    <td>4.339 &mu;s</td>
+    <td>4.227 &mu;s</td>
+    <td>4.557 &mu;s</td>
+    <td>1.00</td>
+    <td>0.00</td>
+  </tr>
+  <tr>
+    <td>RabbitMQ</td>
+    <td>1024</td>
+    <td>497.559 &mu;s</td>
+    <td>6.8654 &mu;s</td>
+    <td>6.4219 &mu;s</td>
+    <td>499.198 &mu;s</td>
+    <td>474.379 &mu;s</td>
+    <td>499.822 &mu;s</td>
+    <td>113.69</td>
+    <td>3.08</td>
+  </tr>
+  <tr>
+    <td>HTTP</td>
+    <td>102400</td>
+    <td>26.658 &mu;s</td>
+    <td>2.1580 &mu;s</td>
+    <td>6.3290 &mu;s</td>
+    <td>26.635 &mu;s</td>
+    <td>11.819 &mu;s</td>
+    <td>43.654 &mu;s</td>
+    <td>1.00</td>
+    <td>0.00</td>
+  </tr>
+  <tr>
+    <td>RabbitMQ</td>
+    <td>102400</td>
+    <td>16.183 &mu;s</td>
+    <td>0.3214 &mu;s</td>
+    <td>0.5282 &mu;s</td>
+    <td>16.176 &mu;s</td>
+    <td>15.245 &mu;s</td>
+    <td>17.488 &mu;s</td>
+    <td>0.63</td>
+    <td>0.16</td>
+  </tr>
+  <tr>
+    <td>HTTP</td>
+    <td>524288</td>
+    <td>67.413 &mu;s</td>
+    <td>3.4318 &mu;s</td>
+    <td>10.1189 &mu;s</td>
+    <td>67.390 &mu;s</td>
+    <td>45.720 &mu;s</td>
+    <td>88.488 &mu;s</td>
+    <td>1.00</td>
+    <td>0.00</td>
+  </tr>
+  <tr>
+    <td>RabbitMQ</td>
+    <td>524288</td>
+    <td>60.702 &mu;s</td>
+    <td>1.1934 &mu;s</td>
+    <td>2.1821 &mu;s</td>
+    <td>60.475 &mu;s</td>
+    <td>56.581 &mu;s</td>
+    <td>66.899 &mu;s</td>
+    <td>0.96</td>
+    <td>0.14</td>
+  </tr>
+  <tr>
+    <td>HTTP</td>
+    <td>1048576</td>
+    <td>113.291 &mu;s</td>
+    <td>5.8713 &mu;s</td>
+    <td>17.3115 &mu;s</td>
+    <td>112.472 &mu;s</td>
+    <td>67.800 &mu;s</td>
+    <td>154.738 &mu;s</td>
+    <td>1.00</td>
+    <td>0.00</td>
+  </tr>
+  <tr>
+    <td>RabbitMQ</td>
+    <td>1048576</td>
+    <td>113.512 &mu;s</td>
+    <td>0.9737 &mu;s</td>
+    <td>0.9108 &mu;s</td>
+    <td>113.705 &mu;s</td>
+    <td>111.258 &mu;s</td>
+    <td>114.847 &mu;s</td>
+    <td>0.88</td>
+    <td>0.10</td>
+  </tr>
+  <tr>
+    <td>HTTP</td>
+    <td>8388608</td>
+    <td>683.993 &mu;s</td>
+    <td>13.6474 &mu;s</td>
+    <td>28.4871 &mu;s</td>
+    <td>682.616 &mu;s</td>
+    <td>633.744 &mu;s</td>
+    <td>744.781 &mu;s</td>
+    <td>1.00</td>
+    <td>0.00</td>
+  </tr>
+  <tr>
+    <td>RabbitMQ</td>
+    <td>8388608</td>
+    <td>746.484 &mu;s</td>
+    <td>38.3293 &mu;s</td>
+    <td>113.0147 &mu;s</td>
+    <td>806.742 &mu;s</td>
+    <td>573.966 &mu;s</td>
+    <td>936.176 &mu;s</td>
+    <td>1.00</td>
+    <td>0.15</td>
+  </tr>
+  <tr>
+    <td>HTTP</td>
+    <td>33554432</td>
+    <td>2,689.569 &mu;s</td>
+    <td>53.7505 &mu;s</td>
+    <td>141.6003 &mu;s</td>
+    <td>2,667.441 &mu;s</td>
+    <td>2,406.582 &mu;s</td>
+    <td>3,051.534 &mu;s</td>
+    <td>1.00</td>
+    <td>0.00</td>
+  </tr>
+  <tr>
+    <td>RabbitMQ</td>
+    <td>33554432</td>
+    <td>2,899.647 &mu;s</td>
+    <td>192.2765 &mu;s</td>
+    <td>566.9317 &mu;s</td>
+    <td>2,612.799 &mu;s</td>
+    <td>2,250.139 &mu;s</td>
+    <td>4,283.379 &mu;s</td>
+    <td>1.12</td>
+    <td>0.21</td>
+  </tr>
+  <tr>
+    <td>HTTP</td>
+    <td>67108864</td>
+    <td>5,421.843 &mu;s</td>
+    <td>107.2595 &mu;s</td>
+    <td>263.1095 &mu;s</td>
+    <td>5,361.971 &mu;s</td>
+    <td>4,875.628 &mu;s</td>
+    <td>6,057.909 &mu;s</td>
+    <td>1.00</td>
+    <td>0.00</td>
+  </tr>
+  <tr>
+    <td>RabbitMQ</td>
+    <td>67108864</td>
+    <td>6,590.524 &mu;s</td>
+    <td>131.2767 &mu;s</td>
+    <td>192.4237 &mu;s</td>
+    <td>6,599.854 &mu;s</td>
+    <td>6,284.084 &mu;s</td>
+    <td>6,964.171 &mu;s</td>
+    <td>1.18</td>
+    <td>0.06</td>
+  </tr>
+  <tr>
+    <td>HTTP</td>
+    <td>104857600</td>
+    <td>9,082.254 &mu;s</td>
+    <td>425.9244 &mu;s</td>
+    <td>1,228.8892 &mu;s</td>
+    <td>9,210.282 &mu;s</td>
+    <td>6,289.454 &mu;s</td>
+    <td>12,304.621 &mu;s</td>
+    <td>1.00</td>
+    <td>0.00</td>
+  </tr>
+  <tr>
+    <td>RabbitMQ</td>
+    <td>104857600</td>
+    <td>10,353.638 &mu;s</td>
+    <td>175.3852 &mu;s</td>
+    <td>155.4744 &mu;s</td>
+    <td>10,289.590 &mu;s</td>
+    <td>10,187.959 &mu;s</td>
+    <td>10,612.433 &mu;s</td>
+    <td>1.50</td>
+    <td>0.10</td>
+  </tr>
+  </tbody>
 </table>
 </body>
 </html>

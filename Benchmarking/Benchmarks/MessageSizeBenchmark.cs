@@ -41,12 +41,6 @@ public class MessageSizeBenchmark
         _httpClient?.Dispose();
     }
 
-    [IterationSetup]
-    public void IterationSetup()
-    {
-        _messageReceivedSource = new TaskCompletionSource<bool>();
-    }
-
     [Benchmark(Baseline = true, OperationsPerInvoke = 100, Description = "HTTP")]
     public async Task<HttpResponseMessage> MessageRestApi() =>
         await _httpClient.PostAsJsonAsync("receive", new { Data = _message });
@@ -54,6 +48,7 @@ public class MessageSizeBenchmark
     [Benchmark(OperationsPerInvoke = 100, Description = "RabbitMQ")]
     public async Task MessageRabbitWaitForReply()
     {
+        _messageReceivedSource = new TaskCompletionSource<bool>(); // Reset the source
         _sendTestingHelper.SendMessage(_message);
 
         // Wait for the reply
@@ -61,10 +56,8 @@ public class MessageSizeBenchmark
             .ConfigureAwait(false);
     }
 
-    private void OnConsumerOnReceived(object? model, BasicDeliverEventArgs ea)
-    {
-        _messageReceivedSource.SetResult(true);
-    }
+    private void OnConsumerOnReceived(object? model, BasicDeliverEventArgs ea) =>
+        _messageReceivedSource?.SetResult(true);
 
     private static HttpClient PrepareHttpClient(string apiBaseUrl)
     {
