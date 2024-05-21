@@ -5,24 +5,27 @@ namespace Messaging.RabbitMQ;
 
 public class MassTransitHelper : IDisposable
 {
-    private readonly IBusControl _busControl = Bus.Factory
-        .CreateUsingRabbitMq(config =>
-        {
-            config.Host("localhost", hostConfig =>
-            {
-                hostConfig.Username("guest");
-                hostConfig.Password("guest");
-            });
+    private readonly IBusControl _busControl;
 
-            config.ReceiveEndpoint(queueName: $"MassTransit-{RabbitConstants.ReceiveQueue}", endpoint =>
+    public MassTransitHelper() => _busControl = SetupBusControl();
+
+    public TestingConsumer Consumer { get; } = new();
+
+    private IBusControl SetupBusControl()
+    {
+        return Bus.Factory
+            .CreateUsingRabbitMq(config =>
             {
-                endpoint.Handler<TestRequest>(async context =>
+                config.Host("localhost", hostConfig =>
                 {
-                    var consumer = new TestingConsumer();
-                    await consumer.Consume(context);
+                    hostConfig.Username("guest");
+                    hostConfig.Password("guest");
                 });
+
+                config.ReceiveEndpoint(queueName: $"MassTransit-{RabbitConstants.ReceiveQueue}",
+                    endpoint => { endpoint.Handler<TestRequest>(context => Consumer.Consume(context)); });
             });
-        });
+    }
 
     public void Start() => _busControl.Start();
 
