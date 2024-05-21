@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using BenchmarkDotNet.Order;
 using Messaging.RabbitMQ;
 using Messaging.RabbitMQ.MassTransit;
 using RabbitMQ.Client.Events;
@@ -7,6 +8,7 @@ namespace Benchmarking.Benchmarks;
 
 [MarkdownExporter]
 [RPlotExporter]
+[Orderer(SummaryOrderPolicy.FastestToSlowest)]
 [MinColumn, MaxColumn, MeanColumn, MedianColumn]
 public class MassTransitBenchmark
 {

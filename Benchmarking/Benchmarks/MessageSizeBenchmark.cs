@@ -1,4 +1,5 @@
 ﻿using System.Net.Http.Json;
+using BenchmarkDotNet.Order;
 using Messaging.RabbitMQ;
 using RabbitMQ.Client.Events;
 
@@ -6,6 +7,7 @@ namespace Benchmarking.Benchmarks;
 
 [RPlotExporter]
 [MarkdownExporter]
+[Orderer(SummaryOrderPolicy.FastestToSlowest)]
 [MinColumn, MaxColumn, MeanColumn, MedianColumn]
 public class MessageSizeBenchmark
 {
