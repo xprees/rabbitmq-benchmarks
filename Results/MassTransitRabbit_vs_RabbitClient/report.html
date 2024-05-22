@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'/>
+    <title>Benchmarking.Benchmarks.MassTransitBenchmark-20240522-164711</title>
+
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+            display: block;
+            width: 100%;
+            overflow: auto;
+        }
+
+        td, th {
+            padding: 6px 13px;
+            border: 1px solid #ddd;
+            text-align: right;
+        }
+
+        tr {
+            background-color: #fff;
+            border-top: 1px solid #ccc;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f8f8;
+        }
+    </style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.12, Windows 11 (10.0.22631.3593/23H2/2023Update/SunValley3)
+13th Gen Intel Core i7-13700H, 1 CPU, 20 logical and 14 physical cores
+.NET SDK 8.0.300
+  [Host]     : .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX2
+  Job-GJHEED : .NET 8.0.5 (8.0.524.21615), X64 RyuJIT AVX2
+</code></pre>
+<pre><code>InvocationCount=1  UnrollFactor=1  
+</code></pre>
+
+<table>
+    <thead>
+    <tr>
+        <th>Method</th>
+        <th>MessageSize</th>
+        <th>Mean</th>
+        <th>Error</th>
+        <th>StdDev</th>
+        <th>Min</th>
+        <th>Max</th>
+        <th>Median</th>
+        <th>Ratio</th>
+        <th>RatioSD</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>MassTransit</td>
+        <td>1024</td>
+        <td>558.4 &mu;s</td>
+        <td>10.91 &mu;s</td>
+        <td>19.96 &mu;s</td>
+        <td>522.8 &mu;s</td>
+        <td>614.9 &mu;s</td>
+        <td>560.5 &mu;s</td>
+        <td>0.12</td>
+        <td>0.00</td>
+    </tr>
+    <tr>
+        <td>RabbitClient</td>
+        <td>1024</td>
+        <td>4,710.6 &mu;s</td>
+        <td>43.16 &mu;s</td>
+        <td>40.38 &mu;s</td>
+        <td>4,646.2 &mu;s</td>
+        <td>4,765.4 &mu;s</td>
+        <td>4,722.7 &mu;s</td>
+        <td>1.00</td>
+        <td>0.00</td>
+    </tr>
+    <tr>
+        <td>RabbitClient</td>
+        <td>102400</td>
+        <td>150.3 &mu;s</td>
+        <td>6.00 &mu;s</td>
+        <td>17.40 &mu;s</td>
+        <td>116.0 &mu;s</td>
+        <td>198.9 &mu;s</td>
+        <td>149.1 &mu;s</td>
+        <td>1.00</td>
+        <td>0.00</td>
+    </tr>
+    <tr>
+        <td>MassTransit</td>
+        <td>102400</td>
+        <td>1,330.2 &mu;s</td>
+        <td>57.22 &mu;s</td>
+        <td>148.73 &mu;s</td>
+        <td>998.4 &mu;s</td>
+        <td>1,712.0 &mu;s</td>
+        <td>1,328.3 &mu;s</td>
+        <td>9.01</td>
+        <td>1.43</td>
+    </tr>
+    <tr>
+        <td>RabbitClient</td>
+        <td>524288</td>
+        <td>435.5 &mu;s</td>
+        <td>12.51 &mu;s</td>
+        <td>36.70 &mu;s</td>
+        <td>366.8 &mu;s</td>
+        <td>522.5 &mu;s</td>
+        <td>433.6 &mu;s</td>
+        <td>1.00</td>
+        <td>0.00</td>
+    </tr>
+    <tr>
+        <td>MassTransit</td>
+        <td>524288</td>
+        <td>5,384.7 &mu;s</td>
+        <td>309.82 &mu;s</td>
+        <td>873.86 &mu;s</td>
+        <td>4,284.6 &mu;s</td>
+        <td>7,601.3 &mu;s</td>
+        <td>5,156.5 &mu;s</td>
+        <td>12.44</td>
+        <td>2.43</td>
+    </tr>
+    <tr>
+        <td>RabbitClient</td>
+        <td>1048576</td>
+        <td>800.0 &mu;s</td>
+        <td>16.04 &mu;s</td>
+        <td>46.79 &mu;s</td>
+        <td>693.9 &mu;s</td>
+        <td>916.0 &mu;s</td>
+        <td>805.2 &mu;s</td>
+        <td>1.00</td>
+        <td>0.00</td>
+    </tr>
+    <tr>
+        <td>MassTransit</td>
+        <td>1048576</td>
+        <td>10,591.0 &mu;s</td>
+        <td>387.32 &mu;s</td>
+        <td>1,092.44 &mu;s</td>
+        <td>8,874.6 &mu;s</td>
+        <td>13,772.8 &mu;s</td>
+        <td>10,415.3 &mu;s</td>
+        <td>13.32</td>
+        <td>1.67</td>
+    </tr>
+    <tr>
+        <td>RabbitClient</td>
+        <td>8388608</td>
+        <td>6,347.6 &mu;s</td>
+        <td>166.49 &mu;s</td>
+        <td>490.91 &mu;s</td>
+        <td>5,630.4 &mu;s</td>
+        <td>7,588.6 &mu;s</td>
+        <td>6,287.8 &mu;s</td>
+        <td>1.00</td>
+        <td>0.00</td>
+    </tr>
+    <tr>
+        <td>MassTransit</td>
+        <td>8388608</td>
+        <td>80,906.8 &mu;s</td>
+        <td>1,559.78 &mu;s</td>
+        <td>1,915.55 &mu;s</td>
+        <td>78,377.0 &mu;s</td>
+        <td>86,615.4 &mu;s</td>
+        <td>80,604.8 &mu;s</td>
+        <td>12.71</td>
+        <td>1.07</td>
+    </tr>
+    <tr>
+        <td>RabbitClient</td>
+        <td>16777216</td>
+        <td>13,369.9 &mu;s</td>
+        <td>317.99 &mu;s</td>
+        <td>932.62 &mu;s</td>
+        <td>10,882.9 &mu;s</td>
+        <td>15,577.2 &mu;s</td>
+        <td>13,451.0 &mu;s</td>
+        <td>1.00</td>
+        <td>0.00</td>
+    </tr>
+    <tr>
+        <td>MassTransit</td>
+        <td>16777216</td>
+        <td>178,415.8 &mu;s</td>
+        <td>7,545.01 &mu;s</td>
+        <td>21,889.44 &mu;s</td>
+        <td>135,717.4 &mu;s</td>
+        <td>235,223.4 &mu;s</td>
+        <td>173,612.9 &mu;s</td>
+        <td>13.42</td>
+        <td>2.08</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
