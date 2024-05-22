@@ -20,32 +20,26 @@ public class MassTransitHelper : IDisposable
 
     public TestingConsumer Consumer { get; } = new();
 
-    private IBusControl SetupBusControlInMemory()
-    {
-        return Bus.Factory
-            .CreateUsingInMemory(config =>
+    private IBusControl SetupBusControlInMemory() => Bus.Factory
+        .CreateUsingInMemory(config =>
+        {
+            config.ReceiveEndpoint(queueName: $"MassTransit-{RabbitConstants.ReceiveQueue}",
+                endpoint => { endpoint.Handler<TestRequest>(context => Consumer.Consume(context)); });
+        });
+
+
+    private IBusControl SetupBusControlWithRabbit() => Bus.Factory
+        .CreateUsingRabbitMq(config =>
+        {
+            config.Host("localhost", hostConfig =>
             {
-                config.ReceiveEndpoint(queueName: $"MassTransit-{RabbitConstants.ReceiveQueue}",
-                    endpoint => { endpoint.Handler<TestRequest>(context => Consumer.Consume(context)); });
+                hostConfig.Username("guest");
+                hostConfig.Password("guest");
             });
-    }
 
-
-    private IBusControl SetupBusControlWithRabbit()
-    {
-        return Bus.Factory
-            .CreateUsingRabbitMq(config =>
-            {
-                config.Host("localhost", hostConfig =>
-                {
-                    hostConfig.Username("guest");
-                    hostConfig.Password("guest");
-                });
-
-                config.ReceiveEndpoint(queueName: $"MassTransit-{RabbitConstants.ReceiveQueue}",
-                    endpoint => { endpoint.Handler<TestRequest>(context => Consumer.Consume(context)); });
-            });
-    }
+            config.ReceiveEndpoint(queueName: $"MassTransit-{RabbitConstants.ReceiveQueue}",
+                endpoint => { endpoint.Handler<TestRequest>(context => Consumer.Consume(context)); });
+        });
 
     public void Start() => _busControl.Start();
 
