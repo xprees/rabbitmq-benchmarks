@@ -7,19 +7,21 @@ namespace Benchmarking.Benchmarks;
 
 [RPlotExporter]
 [MarkdownExporter]
-[Orderer(SummaryOrderPolicy.FastestToSlowest)]
+[Orderer(SummaryOrderPolicy.Declared)]
 [MinColumn, MaxColumn, MeanColumn, MedianColumn]
-public class MessageSizeBenchmark
+public class RabbitMqAndHttpBenchmark
 {
-    private RabbitTestingHelper _sendTestingHelper = null!;
-    private RabbitTestingHelper _receiveTestingHelper = null!;
+    private RabbitTestingHelper _sendOnlyRabbitHelper = null!;
+    private RabbitTestingHelper _sendRabbitHelper = null!;
+    private RabbitTestingHelper _receiveRabbitHelper = null!;
 
     private const string RestApiBaseUrl = "http://localhost:5050";
 
     private HttpClient _httpClient = null!;
 
     // 1KB, 100KB, 512KB, 1MB, 8MB, 32MB, 64MB, 100MB
-    [Params(1024, 1024 * 100, 1024 * 512, 1_048_576, 8_388_608, 33_554_432, 67_108_864, 104_857_600)]
+    //[Params(1024, 1024 * 100, 1024 * 512, 1_048_576, 8_388_608, 33_554_432, 67_108_864, 104_857_600)]
+    [Params(1024, 1024 * 100)]
     public int MessageSize { get; set; } // (128MB max message size RabbitMQ supports, 100MB for HTTP)
 
     private byte[] _message = null!;
@@ -29,8 +31,12 @@ public class MessageSizeBenchmark
     public void Setup()
     {
         _message = new byte[MessageSize];
-        _sendTestingHelper = new RabbitTestingHelper(RabbitConstants.SendQueue);
-        _receiveTestingHelper =
+
+        _sendOnlyRabbitHelper =
+            new RabbitTestingHelper(RabbitConstants.SendOnlyQueue, onAck: (sender, args) => { });
+
+        _sendRabbitHelper = new RabbitTestingHelper(RabbitConstants.SendQueue);
+        _receiveRabbitHelper =
             new RabbitTestingHelper(RabbitConstants.SendQueue, onMessageReceived: OnConsumerOnReceived);
         _httpClient = PrepareHttpClient(RestApiBaseUrl);
     }
@@ -38,8 +44,10 @@ public class MessageSizeBenchmark
     [GlobalCleanup]
     public void Cleanup()
     {
-        _sendTestingHelper?.Dispose();
-        _receiveTestingHelper?.Dispose();
+        _sendOnlyRabbitHelper?.Channel?.QueuePurge(RabbitConstants.SendOnlyQueue); // No one is listening to this queue
+        _sendOnlyRabbitHelper?.Dispose();
+        _sendRabbitHelper?.Dispose();
+        _receiveRabbitHelper?.Dispose();
         _httpClient?.Dispose();
     }
 
@@ -47,15 +55,26 @@ public class MessageSizeBenchmark
     public async Task<HttpResponseMessage> MessageRestApi() =>
         await _httpClient.PostAsJsonAsync("receive", new { Data = _message });
 
-    [Benchmark(OperationsPerInvoke = 100, Description = "RabbitMQ")]
+    // This is a 2-way communication, so we need to wait for the reply to get from the broker (receiver also this client)
+    [Benchmark(OperationsPerInvoke = 100, Description = "RabbitMQ-2Way")]
     public async Task MessageRabbitWaitForReply()
     {
         _messageReceivedSource = new TaskCompletionSource<bool>(); // Reset the source
-        _sendTestingHelper.SendMessage(_message);
+        _sendRabbitHelper.SendMessage(_message);
 
         // Wait for the reply
         await _messageReceivedSource.Task
             .ConfigureAwait(false);
+    }
+
+    [Benchmark(OperationsPerInvoke = 100, Description = "RabbitMQ-1Way")]
+    public bool? MessageRabbitOneWay()
+    {
+        _sendOnlyRabbitHelper.SendMessage(_message);
+
+        // Wait for the reply
+        var received = _sendOnlyRabbitHelper.Channel.WaitForConfirms(TimeSpan.FromSeconds(10));
+        return received ? true : null; // null means discard the result - something went wrong
     }
 
     private void OnConsumerOnReceived(object? model, BasicDeliverEventArgs ea) =>

@@ -1,4 +1,4 @@
 ﻿using BenchmarkDotNet.Running;
 using Benchmarking.Benchmarks;
 
-BenchmarkRunner.Run<MassTransitBenchmark>();
+BenchmarkRunner.Run<RabbitMqAndHttpBenchmark>();
