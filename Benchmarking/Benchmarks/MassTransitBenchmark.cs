@@ -18,8 +18,8 @@ public class MassTransitBenchmark
     private RabbitTestingHelper _receiveTestingHelper = null!;
     private TaskCompletionSource<bool> _rabbitMessageReceivedSource = null!;
 
-    // 1KB, 100KB, 512KB, 1MB, 4MB
-    [Params(1024, 1024 * 100, 1024 * 512, 1_048_576, 4_194_304)]
+    // 100KB, 512KB, 1MB, 4MB
+    [Params(1024 * 100, 1024 * 512, 1_048_576, 4_194_304)]
     public int MessageSize { get; set; }
 
     private byte[] _message = null!;
