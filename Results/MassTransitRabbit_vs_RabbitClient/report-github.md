@@ -1,3 +1,9 @@
+# MassTransitRabbit vs RabbitMQClient in .NET
+
+<details>
+
+<summary>Testing Environment Details</summary>
+
 ```
 
 BenchmarkDotNet v0.13.12, Windows 11 (10.0.22631.3593/23H2/2023Update/SunValley3)
@@ -9,6 +15,8 @@ BenchmarkDotNet v0.13.12, Windows 11 (10.0.22631.3593/23H2/2023Update/SunValley3
 InvocationCount=1  UnrollFactor=1  
 
 ```
+
+</details>
 
 | Method       | MessageSize |         Mean |       Error |       StdDev |          Min |          Max |       Median | Ratio | RatioSD |
 |--------------|-------------|-------------:|------------:|-------------:|-------------:|-------------:|-------------:|------:|--------:|
