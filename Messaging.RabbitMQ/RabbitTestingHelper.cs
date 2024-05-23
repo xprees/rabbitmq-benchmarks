@@ -6,27 +6,32 @@ namespace Messaging.RabbitMQ;
 public class RabbitTestingHelper : IDisposable
 {
     private readonly IConnection _connection;
-    private readonly IModel _channel;
     private readonly EventingBasicConsumer? _consumer;
     private readonly EventHandler<BasicDeliverEventArgs>? _onMessageReceived;
 
     public string QueueName { get; }
-    public IModel Channel => _channel;
+    public IModel Channel { get; }
 
     public RabbitTestingHelper(string queueName, string hostName = "localhost",
-        EventHandler<BasicDeliverEventArgs>? onMessageReceived = null)
+        EventHandler<BasicDeliverEventArgs>? onMessageReceived = null,
+        EventHandler<BasicAckEventArgs>? onAck = null,
+        EventHandler<BasicNackEventArgs>? onNack = null)
     {
         _onMessageReceived = onMessageReceived;
         QueueName = queueName;
 
         var factory = new ConnectionFactory { HostName = hostName };
         _connection = factory.CreateConnection();
-        _channel = PrepareChannel();
+        Channel = PrepareChannel();
 
-        if (onMessageReceived != null)
+        if (onAck is not null || onNack is not null)
         {
-            _consumer = StartReceiving(onMessageReceived);
+            Channel.ConfirmSelect();
+            if (onAck != null) Channel.BasicAcks += onAck;
+            if (onNack != null) Channel.BasicNacks += onNack;
         }
+
+        if (onMessageReceived != null) _consumer = StartReceiving(onMessageReceived);
     }
 
     private IModel PrepareChannel()
@@ -44,9 +49,9 @@ public class RabbitTestingHelper : IDisposable
 
     private EventingBasicConsumer StartReceiving(EventHandler<BasicDeliverEventArgs> onMessageReceived)
     {
-        var consumer = new EventingBasicConsumer(_channel);
+        var consumer = new EventingBasicConsumer(Channel);
         consumer.Received += onMessageReceived;
-        _channel.BasicConsume(
+        Channel.BasicConsume(
             queue: QueueName,
             autoAck: true,
             consumer: consumer
@@ -56,7 +61,7 @@ public class RabbitTestingHelper : IDisposable
     }
 
     public void SendMessage(byte[] message) =>
-        _channel.BasicPublish(
+        Channel.BasicPublish(
             exchange: string.Empty,
             routingKey: QueueName,
             body: new ReadOnlyMemory<byte>(message));
@@ -65,9 +70,9 @@ public class RabbitTestingHelper : IDisposable
     public void Dispose()
     {
         if (_onMessageReceived != null && _consumer != null) _consumer.Received -= _onMessageReceived;
-        _channel.Close();
+        Channel.Close();
         _connection.Close();
         _connection.Dispose();
-        _channel.Dispose();
+        Channel.Dispose();
     }
 }
