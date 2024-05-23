@@ -1,6 +1,7 @@
 # HTTP vs RabbitMQ Benchmark
 
-Comparing the performance of sending messages of various sizes using HTTP and RabbitMQ
+Comparing the performance of sending messages of various sizes using HTTP and RabbitMQ. Rabbit-RT (RabbitMQ Round-Trip) is the time taken to send a
+message to RabbitMQ and receive it back.
 
 <details>
 
@@ -40,3 +41,7 @@ BenchmarkDotNet v0.13.12, Windows 11 (10.0.22631.3593/23H2/2023Update/SunValley3
 | HTTP        | 4194304     | 308.745 μs | 8.1529 μs | 24.0389 μs | 261.737 μs | 369.746 μs | 306.484 μs |   1.00 |    0.00 |
 | RabbitMQ    | 4194304     | 223.394 μs | 8.7457 μs | 25.5118 μs | 174.962 μs | 288.236 μs | 219.136 μs |   0.73 |    0.10 |
 | RabbitMQ-RT | 4194304     | 384.524 μs | 8.8646 μs | 25.0027 μs | 341.822 μs | 462.462 μs | 380.307 μs |   1.25 |    0.12 |
+
+## Visualisation of Results
+
+![Benchmark Results](viz.svg)

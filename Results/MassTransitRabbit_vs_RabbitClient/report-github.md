@@ -17,8 +17,9 @@ InvocationCount=1  UnrollFactor=1
 ```
 
 </details>
-| Method       | MessageSize | Mean        | Error       | StdDev      | Median      | Min         | Max         | Ratio | RatioSD |
-|------------- |------------ |------------:|------------:|------------:|------------:|------------:|------------:|------:|--------:|
+
+| Method       | MessageSize |        Mean |       Error |      StdDev |      Median |         Min |         Max | Ratio | RatioSD |
+|--------------|-------------|------------:|------------:|------------:|------------:|------------:|------------:|------:|--------:|
 | RabbitClient | 102400      |    158.9 μs |     8.29 μs |    24.31 μs |    157.1 μs |    119.8 μs |    213.8 μs |  1.00 |    0.00 |
 | MassTransit  | 102400      |  1,331.2 μs |    48.29 μs |   126.37 μs |  1,319.1 μs |  1,125.7 μs |  1,707.5 μs |  8.57 |    1.62 |
 |              |             |             |             |             |             |             |             |       |         |
@@ -30,3 +31,7 @@ InvocationCount=1  UnrollFactor=1
 |              |             |             |             |             |             |             |             |       |         |
 | RabbitClient | 4194304     |  3,982.1 μs |   158.14 μs |   463.79 μs |  3,841.2 μs |  3,224.1 μs |  5,211.6 μs |  1.00 |    0.00 |
 | MassTransit  | 4194304     | 40,796.1 μs | 1,004.85 μs | 2,817.71 μs | 40,829.7 μs | 34,972.9 μs | 46,008.6 μs | 10.42 |    1.46 |
+
+## Visualisation of Results
+
+![Benchmark Results](viz.svg)
