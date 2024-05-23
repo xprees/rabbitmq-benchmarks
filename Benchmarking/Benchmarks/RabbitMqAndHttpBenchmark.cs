@@ -55,8 +55,16 @@ public class RabbitMqAndHttpBenchmark
     public async Task<HttpResponseMessage> MessageRestApi() =>
         await _httpClient.PostAsJsonAsync("receive", new { Data = _message });
 
+    [Benchmark(OperationsPerInvoke = 100, Description = "RabbitMQ")]
+    public bool? MessageRabbitOneWay()
+    {
+        _sendOnlyRabbitHelper.SendMessage(_message);
+        var received = _sendOnlyRabbitHelper.Channel.WaitForConfirms(TimeSpan.FromSeconds(10));
+        return received ? true : null; // null means discard the result - something went wrong
+    }
+
     // This is a 2-way communication, so we need to wait for the reply to get from the broker (receiver also this client)
-    [Benchmark(OperationsPerInvoke = 100, Description = "RabbitMQ-2Way")]
+    [Benchmark(OperationsPerInvoke = 100, Description = "RabbitMQ-RT")]
     public async Task MessageRabbitWaitForReply()
     {
         _messageReceivedSource = new TaskCompletionSource<bool>(); // Reset the source
@@ -65,16 +73,6 @@ public class RabbitMqAndHttpBenchmark
         // Wait for the reply
         await _messageReceivedSource.Task
             .ConfigureAwait(false);
-    }
-
-    [Benchmark(OperationsPerInvoke = 100, Description = "RabbitMQ-1Way")]
-    public bool? MessageRabbitOneWay()
-    {
-        _sendOnlyRabbitHelper.SendMessage(_message);
-
-        // Wait for the reply
-        var received = _sendOnlyRabbitHelper.Channel.WaitForConfirms(TimeSpan.FromSeconds(10));
-        return received ? true : null; // null means discard the result - something went wrong
     }
 
     private void OnConsumerOnReceived(object? model, BasicDeliverEventArgs ea) =>
