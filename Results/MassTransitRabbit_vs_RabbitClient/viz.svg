@@ -1,0 +1,1069 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="marks"
+     width="461" height="454" viewBox="0 0 461 454">
+  <rect width="461" height="454" fill="white"/>
+  <g fill="none" stroke-miterlimit="10" transform="translate(55,6)">
+    <g class="mark-group role-frame root" role="graphics-object" aria-roledescription="group mark container">
+      <g transform="translate(0,0)">
+        <path class="background" aria-hidden="true" d="M0,0h0v0h0Z"/>
+        <g>
+          <g class="mark-group role-scope concat_0_group" role="graphics-object"
+             aria-roledescription="group mark container">
+            <g transform="translate(0,0)">
+              <path class="background" aria-hidden="true" d="M0,0h0v0h0Z"/>
+              <g>
+                <g class="mark-group role-row-header concat_0_row_header" role="graphics-object"
+                   aria-roledescription="group mark container">
+                  <g transform="translate(-1,0)">
+                    <path class="background" aria-hidden="true" d="M0,0h0v20h0Z"/>
+                    <g>
+                      <g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis"
+                         aria-label="Y-axis for a discrete scale with 1 value: 100k">
+                        <g transform="translate(0.5,0.5)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-rule role-axis-tick" pointer-events="none">
+                              <line transform="translate(0,10)" x2="-5" y2="0" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                            <g class="mark-text role-axis-label" pointer-events="none">
+                              <text text-anchor="end" transform="translate(-7,12.5)" font-family="sans-serif"
+                                    font-size="10px" fill="#000" opacity="1">100k
+                              </text>
+                            </g>
+                            <g class="mark-rule role-axis-domain" pointer-events="none">
+                              <line transform="translate(0,0)" x2="0" y2="20" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                      <g class="mark-group role-title">
+                        <g transform="translate(-48.6845703125,10)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-text role-title-text" role="graphics-symbol" aria-roledescription="title"
+                               aria-label="Title text 'MT'" pointer-events="none">
+                              <text text-anchor="middle" transform="translate(0,0) rotate(-90) translate(0,8)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">MT
+                              </text>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                    </g>
+                    <path class="foreground" aria-hidden="true" d="" display="none"/>
+                  </g>
+                  <g transform="translate(-1,42)">
+                    <path class="background" aria-hidden="true" d="M0,0h0v20h0Z"/>
+                    <g>
+                      <g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis"
+                         aria-label="Y-axis for a discrete scale with 1 value: 100k">
+                        <g transform="translate(0.5,0.5)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-rule role-axis-tick" pointer-events="none">
+                              <line transform="translate(0,10)" x2="-5" y2="0" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                            <g class="mark-text role-axis-label" pointer-events="none">
+                              <text text-anchor="end" transform="translate(-7,12.5)" font-family="sans-serif"
+                                    font-size="10px" fill="#000" opacity="1">100k
+                              </text>
+                            </g>
+                            <g class="mark-rule role-axis-domain" pointer-events="none">
+                              <line transform="translate(0,0)" x2="0" y2="20" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                      <g class="mark-group role-title">
+                        <g transform="translate(-48.6845703125,10)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-text role-title-text" role="graphics-symbol" aria-roledescription="title"
+                               aria-label="Title text 'Rabbit'" pointer-events="none">
+                              <text text-anchor="middle" transform="translate(0,0) rotate(-90) translate(0,8)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">Rabbit
+                              </text>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                    </g>
+                    <path class="foreground" aria-hidden="true" d="" display="none"/>
+                  </g>
+                </g>
+                <g class="mark-group role-column-footer concat_0_column_footer" role="graphics-object"
+                   aria-roledescription="group mark container">
+                  <g transform="translate(0,63)">
+                    <path class="background" aria-hidden="true" d="M0,0h400v0h-400Z"/>
+                    <g>
+                      <g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis"
+                         aria-label="X-axis titled 'Mean (ns)' for a linear scale with values from 0 to 45">
+                        <g transform="translate(0.5,0.5)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-rule role-axis-tick" pointer-events="none">
+                              <line transform="translate(0,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(44,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(89,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(133,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(178,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(222,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(267,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(311,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(356,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(400,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                            <g class="mark-text role-axis-label" pointer-events="none">
+                              <text text-anchor="start" transform="translate(0,15)" font-family="sans-serif"
+                                    font-size="10px" fill="#000" opacity="1">0
+                              </text>
+                              <text text-anchor="middle" transform="translate(44.44444444444444,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">5
+                              </text>
+                              <text text-anchor="middle" transform="translate(88.88888888888889,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">10
+                              </text>
+                              <text text-anchor="middle" transform="translate(133.33333333333331,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">15
+                              </text>
+                              <text text-anchor="middle" transform="translate(177.77777777777777,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">20
+                              </text>
+                              <text text-anchor="middle" transform="translate(222.22222222222223,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">25
+                              </text>
+                              <text text-anchor="middle" transform="translate(266.66666666666663,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">30
+                              </text>
+                              <text text-anchor="middle" transform="translate(311.11111111111114,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">35
+                              </text>
+                              <text text-anchor="middle" transform="translate(355.55555555555554,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">40
+                              </text>
+                              <text text-anchor="end" transform="translate(400,15)" font-family="sans-serif"
+                                    font-size="10px" fill="#000" opacity="1">45
+                              </text>
+                            </g>
+                            <g class="mark-rule role-axis-domain" pointer-events="none">
+                              <line transform="translate(0,0)" x2="400" y2="0" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                            <g class="mark-text role-axis-title" pointer-events="none">
+                              <text text-anchor="middle" transform="translate(200,30)" font-family="sans-serif"
+                                    font-size="11px" font-weight="bold" fill="#000" opacity="1">Mean (ns)
+                              </text>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                    </g>
+                    <path class="foreground" aria-hidden="true" d="" display="none"/>
+                  </g>
+                </g>
+                <g class="mark-group role-scope concat_0_cell" role="graphics-object"
+                   aria-roledescription="group mark container">
+                  <g transform="translate(0,0)">
+                    <path class="background" aria-hidden="true" d="M0.5,0.5h400v20h-400Z" stroke="#ddd"/>
+                    <g>
+                      <g class="mark-group role-axis" aria-hidden="true">
+                        <g transform="translate(0.5,20.5)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-rule role-axis-grid" pointer-events="none">
+                              <line transform="translate(0,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(44,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(89,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(133,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(178,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(222,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(267,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(311,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(356,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(400,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                      <g class="mark-rect role-mark concat_0_child_marks" role="graphics-object"
+                         aria-roledescription="rect mark container">
+                        <path aria-label="Mean (ns): 1.3312; MessageSize: 100k; Method: MT" role="graphics-symbol"
+                              aria-roledescription="bar" d="M0,1h11.832888888888888v18h-11.832888888888888Z"
+                              fill="#4c78a8"/>
+                      </g>
+                    </g>
+                    <path class="foreground" aria-hidden="true" d="" display="none"/>
+                  </g>
+                  <g transform="translate(0,42)">
+                    <path class="background" aria-hidden="true" d="M0.5,0.5h400v20h-400Z" stroke="#ddd"/>
+                    <g>
+                      <g class="mark-group role-axis" aria-hidden="true">
+                        <g transform="translate(0.5,20.5)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-rule role-axis-grid" pointer-events="none">
+                              <line transform="translate(0,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(44,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(89,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(133,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(178,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(222,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(267,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(311,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(356,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(400,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                      <g class="mark-rect role-mark concat_0_child_marks" role="graphics-object"
+                         aria-roledescription="rect mark container">
+                        <path aria-label="Mean (ns): 0.1589; MessageSize: 100k; Method: Rabbit" role="graphics-symbol"
+                              aria-roledescription="bar" d="M0,1h1.4124444444444446v18h-1.4124444444444446Z"
+                              fill="#f58518"/>
+                      </g>
+                    </g>
+                    <path class="foreground" aria-hidden="true" d="" display="none"/>
+                  </g>
+                </g>
+              </g>
+              <path class="foreground" aria-hidden="true" d="" display="none"/>
+            </g>
+          </g>
+          <g class="mark-group role-scope concat_1_group" role="graphics-object"
+             aria-roledescription="group mark container">
+            <g transform="translate(0,116)">
+              <path class="background" aria-hidden="true" d="M0,0h0v0h0Z"/>
+              <g>
+                <g class="mark-group role-row-header concat_1_row_header" role="graphics-object"
+                   aria-roledescription="group mark container">
+                  <g transform="translate(-1,0)">
+                    <path class="background" aria-hidden="true" d="M0,0h0v20h0Z"/>
+                    <g>
+                      <g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis"
+                         aria-label="Y-axis for a discrete scale with 1 value: 500k">
+                        <g transform="translate(0.5,0.5)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-rule role-axis-tick" pointer-events="none">
+                              <line transform="translate(0,10)" x2="-5" y2="0" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                            <g class="mark-text role-axis-label" pointer-events="none">
+                              <text text-anchor="end" transform="translate(-7,12.5)" font-family="sans-serif"
+                                    font-size="10px" fill="#000" opacity="1">500k
+                              </text>
+                            </g>
+                            <g class="mark-rule role-axis-domain" pointer-events="none">
+                              <line transform="translate(0,0)" x2="0" y2="20" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                      <g class="mark-group role-title">
+                        <g transform="translate(-48.6845703125,10)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-text role-title-text" role="graphics-symbol" aria-roledescription="title"
+                               aria-label="Title text 'MT'" pointer-events="none">
+                              <text text-anchor="middle" transform="translate(0,0) rotate(-90) translate(0,8)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">MT
+                              </text>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                    </g>
+                    <path class="foreground" aria-hidden="true" d="" display="none"/>
+                  </g>
+                  <g transform="translate(-1,42)">
+                    <path class="background" aria-hidden="true" d="M0,0h0v20h0Z"/>
+                    <g>
+                      <g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis"
+                         aria-label="Y-axis for a discrete scale with 1 value: 500k">
+                        <g transform="translate(0.5,0.5)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-rule role-axis-tick" pointer-events="none">
+                              <line transform="translate(0,10)" x2="-5" y2="0" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                            <g class="mark-text role-axis-label" pointer-events="none">
+                              <text text-anchor="end" transform="translate(-7,12.5)" font-family="sans-serif"
+                                    font-size="10px" fill="#000" opacity="1">500k
+                              </text>
+                            </g>
+                            <g class="mark-rule role-axis-domain" pointer-events="none">
+                              <line transform="translate(0,0)" x2="0" y2="20" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                      <g class="mark-group role-title">
+                        <g transform="translate(-48.6845703125,10)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-text role-title-text" role="graphics-symbol" aria-roledescription="title"
+                               aria-label="Title text 'Rabbit'" pointer-events="none">
+                              <text text-anchor="middle" transform="translate(0,0) rotate(-90) translate(0,8)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">Rabbit
+                              </text>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                    </g>
+                    <path class="foreground" aria-hidden="true" d="" display="none"/>
+                  </g>
+                </g>
+                <g class="mark-group role-column-footer concat_1_column_footer" role="graphics-object"
+                   aria-roledescription="group mark container">
+                  <g transform="translate(0,63)">
+                    <path class="background" aria-hidden="true" d="M0,0h400v0h-400Z"/>
+                    <g>
+                      <g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis"
+                         aria-label="X-axis titled 'Mean (ns)' for a linear scale with values from 0 to 45">
+                        <g transform="translate(0.5,0.5)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-rule role-axis-tick" pointer-events="none">
+                              <line transform="translate(0,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(44,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(89,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(133,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(178,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(222,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(267,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(311,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(356,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(400,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                            <g class="mark-text role-axis-label" pointer-events="none">
+                              <text text-anchor="start" transform="translate(0,15)" font-family="sans-serif"
+                                    font-size="10px" fill="#000" opacity="1">0
+                              </text>
+                              <text text-anchor="middle" transform="translate(44.44444444444444,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">5
+                              </text>
+                              <text text-anchor="middle" transform="translate(88.88888888888889,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">10
+                              </text>
+                              <text text-anchor="middle" transform="translate(133.33333333333331,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">15
+                              </text>
+                              <text text-anchor="middle" transform="translate(177.77777777777777,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">20
+                              </text>
+                              <text text-anchor="middle" transform="translate(222.22222222222223,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">25
+                              </text>
+                              <text text-anchor="middle" transform="translate(266.66666666666663,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">30
+                              </text>
+                              <text text-anchor="middle" transform="translate(311.11111111111114,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">35
+                              </text>
+                              <text text-anchor="middle" transform="translate(355.55555555555554,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">40
+                              </text>
+                              <text text-anchor="end" transform="translate(400,15)" font-family="sans-serif"
+                                    font-size="10px" fill="#000" opacity="1">45
+                              </text>
+                            </g>
+                            <g class="mark-rule role-axis-domain" pointer-events="none">
+                              <line transform="translate(0,0)" x2="400" y2="0" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                            <g class="mark-text role-axis-title" pointer-events="none">
+                              <text text-anchor="middle" transform="translate(200,30)" font-family="sans-serif"
+                                    font-size="11px" font-weight="bold" fill="#000" opacity="1">Mean (ns)
+                              </text>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                    </g>
+                    <path class="foreground" aria-hidden="true" d="" display="none"/>
+                  </g>
+                </g>
+                <g class="mark-group role-scope concat_1_cell" role="graphics-object"
+                   aria-roledescription="group mark container">
+                  <g transform="translate(0,0)">
+                    <path class="background" aria-hidden="true" d="M0.5,0.5h400v20h-400Z" stroke="#ddd"/>
+                    <g>
+                      <g class="mark-group role-axis" aria-hidden="true">
+                        <g transform="translate(0.5,20.5)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-rule role-axis-grid" pointer-events="none">
+                              <line transform="translate(0,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(44,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(89,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(133,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(178,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(222,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(267,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(311,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(356,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(400,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                      <g class="mark-rect role-mark concat_1_child_marks" role="graphics-object"
+                         aria-roledescription="rect mark container">
+                        <path aria-label="Mean (ns): 5.5627; MessageSize: 500k; Method: MT" role="graphics-symbol"
+                              aria-roledescription="bar" d="M0,1h49.44622222222222v18h-49.44622222222222Z"
+                              fill="#4c78a8"/>
+                      </g>
+                    </g>
+                    <path class="foreground" aria-hidden="true" d="" display="none"/>
+                  </g>
+                  <g transform="translate(0,42)">
+                    <path class="background" aria-hidden="true" d="M0.5,0.5h400v20h-400Z" stroke="#ddd"/>
+                    <g>
+                      <g class="mark-group role-axis" aria-hidden="true">
+                        <g transform="translate(0.5,20.5)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-rule role-axis-grid" pointer-events="none">
+                              <line transform="translate(0,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(44,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(89,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(133,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(178,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(222,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(267,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(311,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(356,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(400,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                      <g class="mark-rect role-mark concat_1_child_marks" role="graphics-object"
+                         aria-roledescription="rect mark container">
+                        <path aria-label="Mean (ns): 0.4536; MessageSize: 500k; Method: Rabbit" role="graphics-symbol"
+                              aria-roledescription="bar" d="M0,1h4.032v18h-4.032Z" fill="#f58518"/>
+                      </g>
+                    </g>
+                    <path class="foreground" aria-hidden="true" d="" display="none"/>
+                  </g>
+                </g>
+              </g>
+              <path class="foreground" aria-hidden="true" d="" display="none"/>
+            </g>
+          </g>
+          <g class="mark-group role-scope concat_2_group" role="graphics-object"
+             aria-roledescription="group mark container">
+            <g transform="translate(0,232)">
+              <path class="background" aria-hidden="true" d="M0,0h0v0h0Z"/>
+              <g>
+                <g class="mark-group role-row-header concat_2_row_header" role="graphics-object"
+                   aria-roledescription="group mark container">
+                  <g transform="translate(-1,0)">
+                    <path class="background" aria-hidden="true" d="M0,0h0v20h0Z"/>
+                    <g>
+                      <g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis"
+                         aria-label="Y-axis for a discrete scale with 1 value: 1M">
+                        <g transform="translate(0.5,0.5)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-rule role-axis-tick" pointer-events="none">
+                              <line transform="translate(0,10)" x2="-5" y2="0" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                            <g class="mark-text role-axis-label" pointer-events="none">
+                              <text text-anchor="end" transform="translate(-7,12.5)" font-family="sans-serif"
+                                    font-size="10px" fill="#000" opacity="1">1M
+                              </text>
+                            </g>
+                            <g class="mark-rule role-axis-domain" pointer-events="none">
+                              <line transform="translate(0,0)" x2="0" y2="20" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                      <g class="mark-group role-title">
+                        <g transform="translate(-40.8916015625,10)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-text role-title-text" role="graphics-symbol" aria-roledescription="title"
+                               aria-label="Title text 'MT'" pointer-events="none">
+                              <text text-anchor="middle" transform="translate(0,0) rotate(-90) translate(0,8)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">MT
+                              </text>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                    </g>
+                    <path class="foreground" aria-hidden="true" d="" display="none"/>
+                  </g>
+                  <g transform="translate(-1,42)">
+                    <path class="background" aria-hidden="true" d="M0,0h0v20h0Z"/>
+                    <g>
+                      <g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis"
+                         aria-label="Y-axis for a discrete scale with 1 value: 1M">
+                        <g transform="translate(0.5,0.5)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-rule role-axis-tick" pointer-events="none">
+                              <line transform="translate(0,10)" x2="-5" y2="0" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                            <g class="mark-text role-axis-label" pointer-events="none">
+                              <text text-anchor="end" transform="translate(-7,12.5)" font-family="sans-serif"
+                                    font-size="10px" fill="#000" opacity="1">1M
+                              </text>
+                            </g>
+                            <g class="mark-rule role-axis-domain" pointer-events="none">
+                              <line transform="translate(0,0)" x2="0" y2="20" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                      <g class="mark-group role-title">
+                        <g transform="translate(-40.8916015625,10)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-text role-title-text" role="graphics-symbol" aria-roledescription="title"
+                               aria-label="Title text 'Rabbit'" pointer-events="none">
+                              <text text-anchor="middle" transform="translate(0,0) rotate(-90) translate(0,8)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">Rabbit
+                              </text>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                    </g>
+                    <path class="foreground" aria-hidden="true" d="" display="none"/>
+                  </g>
+                </g>
+                <g class="mark-group role-column-footer concat_2_column_footer" role="graphics-object"
+                   aria-roledescription="group mark container">
+                  <g transform="translate(0,63)">
+                    <path class="background" aria-hidden="true" d="M0,0h400v0h-400Z"/>
+                    <g>
+                      <g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis"
+                         aria-label="X-axis titled 'Mean (ns)' for a linear scale with values from 0 to 45">
+                        <g transform="translate(0.5,0.5)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-rule role-axis-tick" pointer-events="none">
+                              <line transform="translate(0,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(44,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(89,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(133,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(178,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(222,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(267,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(311,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(356,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(400,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                            <g class="mark-text role-axis-label" pointer-events="none">
+                              <text text-anchor="start" transform="translate(0,15)" font-family="sans-serif"
+                                    font-size="10px" fill="#000" opacity="1">0
+                              </text>
+                              <text text-anchor="middle" transform="translate(44.44444444444444,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">5
+                              </text>
+                              <text text-anchor="middle" transform="translate(88.88888888888889,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">10
+                              </text>
+                              <text text-anchor="middle" transform="translate(133.33333333333331,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">15
+                              </text>
+                              <text text-anchor="middle" transform="translate(177.77777777777777,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">20
+                              </text>
+                              <text text-anchor="middle" transform="translate(222.22222222222223,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">25
+                              </text>
+                              <text text-anchor="middle" transform="translate(266.66666666666663,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">30
+                              </text>
+                              <text text-anchor="middle" transform="translate(311.11111111111114,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">35
+                              </text>
+                              <text text-anchor="middle" transform="translate(355.55555555555554,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">40
+                              </text>
+                              <text text-anchor="end" transform="translate(400,15)" font-family="sans-serif"
+                                    font-size="10px" fill="#000" opacity="1">45
+                              </text>
+                            </g>
+                            <g class="mark-rule role-axis-domain" pointer-events="none">
+                              <line transform="translate(0,0)" x2="400" y2="0" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                            <g class="mark-text role-axis-title" pointer-events="none">
+                              <text text-anchor="middle" transform="translate(200,30)" font-family="sans-serif"
+                                    font-size="11px" font-weight="bold" fill="#000" opacity="1">Mean (ns)
+                              </text>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                    </g>
+                    <path class="foreground" aria-hidden="true" d="" display="none"/>
+                  </g>
+                </g>
+                <g class="mark-group role-scope concat_2_cell" role="graphics-object"
+                   aria-roledescription="group mark container">
+                  <g transform="translate(0,0)">
+                    <path class="background" aria-hidden="true" d="M0.5,0.5h400v20h-400Z" stroke="#ddd"/>
+                    <g>
+                      <g class="mark-group role-axis" aria-hidden="true">
+                        <g transform="translate(0.5,20.5)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-rule role-axis-grid" pointer-events="none">
+                              <line transform="translate(0,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(44,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(89,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(133,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(178,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(222,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(267,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(311,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(356,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(400,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                      <g class="mark-rect role-mark concat_2_child_marks" role="graphics-object"
+                         aria-roledescription="rect mark container">
+                        <path aria-label="Mean (ns): 11.1389; MessageSize: 1M; Method: MT" role="graphics-symbol"
+                              aria-roledescription="bar" d="M0,1h99.01244444444444v18h-99.01244444444444Z"
+                              fill="#4c78a8"/>
+                      </g>
+                    </g>
+                    <path class="foreground" aria-hidden="true" d="" display="none"/>
+                  </g>
+                  <g transform="translate(0,42)">
+                    <path class="background" aria-hidden="true" d="M0.5,0.5h400v20h-400Z" stroke="#ddd"/>
+                    <g>
+                      <g class="mark-group role-axis" aria-hidden="true">
+                        <g transform="translate(0.5,20.5)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-rule role-axis-grid" pointer-events="none">
+                              <line transform="translate(0,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(44,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(89,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(133,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(178,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(222,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(267,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(311,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(356,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(400,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                      <g class="mark-rect role-mark concat_2_child_marks" role="graphics-object"
+                         aria-roledescription="rect mark container">
+                        <path aria-label="Mean (ns): 0.8368; MessageSize: 1M; Method: Rabbit" role="graphics-symbol"
+                              aria-roledescription="bar" d="M0,1h7.4382222222222225v18h-7.4382222222222225Z"
+                              fill="#f58518"/>
+                      </g>
+                    </g>
+                    <path class="foreground" aria-hidden="true" d="" display="none"/>
+                  </g>
+                </g>
+              </g>
+              <path class="foreground" aria-hidden="true" d="" display="none"/>
+            </g>
+          </g>
+          <g class="mark-group role-scope concat_3_group" role="graphics-object"
+             aria-roledescription="group mark container">
+            <g transform="translate(0,348)">
+              <path class="background" aria-hidden="true" d="M0,0h0v0h0Z"/>
+              <g>
+                <g class="mark-group role-row-header concat_3_row_header" role="graphics-object"
+                   aria-roledescription="group mark container">
+                  <g transform="translate(-1,0)">
+                    <path class="background" aria-hidden="true" d="M0,0h0v20h0Z"/>
+                    <g>
+                      <g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis"
+                         aria-label="Y-axis for a discrete scale with 1 value: 4M">
+                        <g transform="translate(0.5,0.5)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-rule role-axis-tick" pointer-events="none">
+                              <line transform="translate(0,10)" x2="-5" y2="0" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                            <g class="mark-text role-axis-label" pointer-events="none">
+                              <text text-anchor="end" transform="translate(-7,12.5)" font-family="sans-serif"
+                                    font-size="10px" fill="#000" opacity="1">4M
+                              </text>
+                            </g>
+                            <g class="mark-rule role-axis-domain" pointer-events="none">
+                              <line transform="translate(0,0)" x2="0" y2="20" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                      <g class="mark-group role-title">
+                        <g transform="translate(-40.8916015625,10)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-text role-title-text" role="graphics-symbol" aria-roledescription="title"
+                               aria-label="Title text 'MT'" pointer-events="none">
+                              <text text-anchor="middle" transform="translate(0,0) rotate(-90) translate(0,8)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">MT
+                              </text>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                    </g>
+                    <path class="foreground" aria-hidden="true" d="" display="none"/>
+                  </g>
+                  <g transform="translate(-1,42)">
+                    <path class="background" aria-hidden="true" d="M0,0h0v20h0Z"/>
+                    <g>
+                      <g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis"
+                         aria-label="Y-axis for a discrete scale with 1 value: 4M">
+                        <g transform="translate(0.5,0.5)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-rule role-axis-tick" pointer-events="none">
+                              <line transform="translate(0,10)" x2="-5" y2="0" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                            <g class="mark-text role-axis-label" pointer-events="none">
+                              <text text-anchor="end" transform="translate(-7,12.5)" font-family="sans-serif"
+                                    font-size="10px" fill="#000" opacity="1">4M
+                              </text>
+                            </g>
+                            <g class="mark-rule role-axis-domain" pointer-events="none">
+                              <line transform="translate(0,0)" x2="0" y2="20" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                      <g class="mark-group role-title">
+                        <g transform="translate(-40.8916015625,10)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-text role-title-text" role="graphics-symbol" aria-roledescription="title"
+                               aria-label="Title text 'Rabbit'" pointer-events="none">
+                              <text text-anchor="middle" transform="translate(0,0) rotate(-90) translate(0,8)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">Rabbit
+                              </text>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                    </g>
+                    <path class="foreground" aria-hidden="true" d="" display="none"/>
+                  </g>
+                </g>
+                <g class="mark-group role-column-footer concat_3_column_footer" role="graphics-object"
+                   aria-roledescription="group mark container">
+                  <g transform="translate(0,63)">
+                    <path class="background" aria-hidden="true" d="M0,0h400v0h-400Z"/>
+                    <g>
+                      <g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis"
+                         aria-label="X-axis titled 'Mean (ns)' for a linear scale with values from 0 to 45">
+                        <g transform="translate(0.5,0.5)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-rule role-axis-tick" pointer-events="none">
+                              <line transform="translate(0,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(44,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(89,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(133,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(178,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(222,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(267,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(311,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(356,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(400,0)" x2="0" y2="5" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                            <g class="mark-text role-axis-label" pointer-events="none">
+                              <text text-anchor="start" transform="translate(0,15)" font-family="sans-serif"
+                                    font-size="10px" fill="#000" opacity="1">0
+                              </text>
+                              <text text-anchor="middle" transform="translate(44.44444444444444,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">5
+                              </text>
+                              <text text-anchor="middle" transform="translate(88.88888888888889,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">10
+                              </text>
+                              <text text-anchor="middle" transform="translate(133.33333333333331,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">15
+                              </text>
+                              <text text-anchor="middle" transform="translate(177.77777777777777,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">20
+                              </text>
+                              <text text-anchor="middle" transform="translate(222.22222222222223,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">25
+                              </text>
+                              <text text-anchor="middle" transform="translate(266.66666666666663,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">30
+                              </text>
+                              <text text-anchor="middle" transform="translate(311.11111111111114,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">35
+                              </text>
+                              <text text-anchor="middle" transform="translate(355.55555555555554,15)"
+                                    font-family="sans-serif" font-size="10px" fill="#000" opacity="1">40
+                              </text>
+                              <text text-anchor="end" transform="translate(400,15)" font-family="sans-serif"
+                                    font-size="10px" fill="#000" opacity="1">45
+                              </text>
+                            </g>
+                            <g class="mark-rule role-axis-domain" pointer-events="none">
+                              <line transform="translate(0,0)" x2="400" y2="0" stroke="#888" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                            <g class="mark-text role-axis-title" pointer-events="none">
+                              <text text-anchor="middle" transform="translate(200,30)" font-family="sans-serif"
+                                    font-size="11px" font-weight="bold" fill="#000" opacity="1">Mean (ns)
+                              </text>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                    </g>
+                    <path class="foreground" aria-hidden="true" d="" display="none"/>
+                  </g>
+                </g>
+                <g class="mark-group role-scope concat_3_cell" role="graphics-object"
+                   aria-roledescription="group mark container">
+                  <g transform="translate(0,0)">
+                    <path class="background" aria-hidden="true" d="M0.5,0.5h400v20h-400Z" stroke="#ddd"/>
+                    <g>
+                      <g class="mark-group role-axis" aria-hidden="true">
+                        <g transform="translate(0.5,20.5)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-rule role-axis-grid" pointer-events="none">
+                              <line transform="translate(0,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(44,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(89,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(133,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(178,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(222,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(267,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(311,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(356,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(400,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                      <g class="mark-rect role-mark concat_3_child_marks" role="graphics-object"
+                         aria-roledescription="rect mark container">
+                        <path aria-label="Mean (ns): 40.7961; MessageSize: 4M; Method: MT" role="graphics-symbol"
+                              aria-roledescription="bar" d="M0,1h362.63199999999995v18h-362.63199999999995Z"
+                              fill="#4c78a8"/>
+                      </g>
+                    </g>
+                    <path class="foreground" aria-hidden="true" d="" display="none"/>
+                  </g>
+                  <g transform="translate(0,42)">
+                    <path class="background" aria-hidden="true" d="M0.5,0.5h400v20h-400Z" stroke="#ddd"/>
+                    <g>
+                      <g class="mark-group role-axis" aria-hidden="true">
+                        <g transform="translate(0.5,20.5)">
+                          <path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"/>
+                          <g>
+                            <g class="mark-rule role-axis-grid" pointer-events="none">
+                              <line transform="translate(0,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(44,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(89,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(133,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(178,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(222,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(267,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(311,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(356,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                              <line transform="translate(400,0)" x2="0" y2="-20" stroke="#ddd" stroke-width="1"
+                                    opacity="1"/>
+                            </g>
+                          </g>
+                          <path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"/>
+                        </g>
+                      </g>
+                      <g class="mark-rect role-mark concat_3_child_marks" role="graphics-object"
+                         aria-roledescription="rect mark container">
+                        <path aria-label="Mean (ns): 3.9821; MessageSize: 4M; Method: Rabbit" role="graphics-symbol"
+                              aria-roledescription="bar" d="M0,1h35.39644444444444v18h-35.39644444444444Z"
+                              fill="#f58518"/>
+                      </g>
+                    </g>
+                    <path class="foreground" aria-hidden="true" d="" display="none"/>
+                  </g>
+                </g>
+              </g>
+              <path class="foreground" aria-hidden="true" d="" display="none"/>
+            </g>
+          </g>
+        </g>
+        <path class="foreground" aria-hidden="true" d="" display="none"/>
+      </g>
+    </g>
+  </g>
+</svg>
