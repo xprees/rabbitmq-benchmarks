@@ -19,5 +19,4 @@ This benchmark compares overhead of [MassTransit](https://masstransit.io) agains
 ## Results
 
 - [Poster](Results/poster-small.png)
-- [Poster (High Resolution)](Results/poster.png)
 - [Report](Results/report.pdf)
