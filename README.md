@@ -15,3 +15,9 @@ This benchmark uses a simple Asp.Net WebAPI application as baseline and compares
 [Results](Results/MassTransitRabbit_vs_RabbitClient/report-github.md)
 
 This benchmark compares overhead of [MassTransit](https://masstransit.io) against RabbitMQ.Client library.
+
+## Results
+
+- [Poster](Results/poster-small.png)
+- [Poster (High Resolution)](Results/poster.png)
+- [Report](Results/report.pdf)
